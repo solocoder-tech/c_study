@@ -4,15 +4,11 @@
 
 int main()
 {
-    for (int i = 0; i < 5; i++)
-        printf("Hello Grayson~%d\n", i); 
-
-    int result = findMaxNum(1,3);
-
-    printf("result=%d",result);
-
-    int a = 10;
-    printf("%d",a);
-
+    int a, b, sum;
+    printf("input two int nums\n");
+    scanf("%d %d", &a, &b);
+    sum = a + b;
+    printf("%d + %d = %d", a, b, sum);
+    
     return 0;
 }

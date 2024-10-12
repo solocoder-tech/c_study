@@ -1,3 +1,4 @@
+// 用来设置指令编译
 {
     "tasks": [
         {
@@ -13,7 +14,7 @@
                 "*.cpp",
                 "-o",
                 // 最后生成的可执行文件
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"  
+                "${fileDirname}\\out\\${fileBasenameNoExtension}.exe"  
             ],
             "options": {
                 "cwd": "${fileDirname}"

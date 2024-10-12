@@ -1,3 +1,4 @@
+// 设置执行环境来执行代码
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
@@ -5,16 +6,22 @@
     "version": "0.2.0",
     "configurations": [
         {
+            ///  强制：就一个名字而已，但是是必须要有的（取任意自己喜欢的名字即可）
             "name": "(gdb) Launch",
+            //  强制：调试器的类型，Node debugger for  node, php for PHP , go for GO (C语言就固定是cppdbg) 
             "type": "cppdbg",
+            //  强制：launch/attach
             "request": "launch",
             // “program”后的内容就是前面提到的tasks.json文件中的编译后产生的可执行文件
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\out\\${fileBasenameNoExtension}.exe",
+            //  调试参数
             "args": [],
             "stopAtEntry": false,
+            //  调试参数
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
+            //  调试器模式/类型
             "MIMode": "gdb",
             //"miDebuggerPath"后面的则是前面安装的 MinGW-W64 的 gdb 工具的路径
             "miDebuggerPath": "D:\\soft\\msys64\\ucrt64\\bin\\gdb.exe",
@@ -31,6 +38,5 @@
                 }
             ]
         }
-
     ]
 }
